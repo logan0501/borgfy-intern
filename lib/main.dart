@@ -2,6 +2,7 @@ import 'package:borgfy_intern/landing_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const MyApp());
@@ -244,6 +245,50 @@ class _MyHomePageState extends State<MyHomePage> {
         Expanded(
           child: Container(
             decoration: BoxDecoration(color: Color(0xffF6615E)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  'OR',
+                  style: TextStyle(color: Colors.white.withOpacity(0.6)),
+                ),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  padding: EdgeInsets.all(10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage('assets/google.png'),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text('Login with google')
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                ),
+                Column(
+                  children: [
+                    Text('REACH',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 25,
+                            color: Colors.white)),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'R.O. for it',
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ],
